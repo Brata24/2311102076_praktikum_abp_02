@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2311102076_PandiaAryaBrata</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Tampilkan Profil</h1>
+    <hr>
+    <p>Klik tombol ini <button id="btnLoad">Tombol</button></p>
+    <p id="target-data">
+
+    </p>
+    <script>
+        $(document).ready(function() {
+            $('#btnLoad').click(function() {
+                $.ajax({
+                    url: 'data.php', // File PHP tujuan
+                    type: 'GET',
+                    dataType: 'json',
+                    beforeSend: function() {
+                        $('#target-data').html('<tr><td colspan="3">Sedang memuat...</td></tr>');
+                    },
+                    success: function(response) {
+                        console.log(response)
+                        $('#target-data').text(`${response.nama} - ${response.pekerjaan} - ${response.lokasi}`);
+                    },
+                    error: function(xhr, status, error) {
+                        alert("Terjadi kesalahan: " + error);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,3 +1,5 @@
+<img width="497" height="917" alt="Screenshot 2026-05-16 221803" src="https://github.com/user-attachments/assets/709df58f-f2c3-44ec-afd2-87e5888babe4" />
+<img width="503" height="1022" alt="Screenshot 2026-05-16 221749" src="https://github.com/user-attachments/assets/73b3cf00-7a14-4b08-b7ba-9a52f730e601" />
 # praktikum_flutter
 
 Demo aplikasi Flutter yang menampilkan beberapa widget UI dasar.
